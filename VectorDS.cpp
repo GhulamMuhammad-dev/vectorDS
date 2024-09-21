@@ -3,47 +3,39 @@
 
 using namespace std;
 
+ vector<int> reverseArray(vector<int> &arry){
+   
+vector<int> newArray;
+int i=arry.size()-1;
+while(i>=0){
+    newArray.push_back(arry[i]);
+    i--;
+}
+
+for(int i=0;i<=arry.size();i++){
+    arry[i]=newArray[i];
+}
+
+
+
+ }
+
+
+
+
 int main(){
    
-   vector<int> firstVec={1,2,3,4,5};
-   
-    
-    for(int i:firstVec){
-        cout<<i<<endl;
-    }
-   cout<<endl;
-    firstVec.push_back(10);
 
-    for(int i:firstVec){
-        cout<<i<<endl;
-    }
+   vector<int> arry={1,2,3,4,5};
+ 
+ reverseArray(arry);
 
-cout<<endl;
-
-cout<<firstVec.capacity()<<endl;
-
-firstVec.pop_back();
-
-for(int i:firstVec){
+for(int i:arry){
     cout<<i<<endl;
 }
+  
+ 
 
-
-// linear search with vectors
-
-vector<string> fruits={"apple","mango","banana","pineapple","orange"} ;
-
-string target="coconut";
-
-for(string i:fruits){
-
-    if(i==target){
-        cout<<"Your fruit is found"<<endl;
-        break;
-    }
-    
-
-}
 
     return 0;
 }
